@@ -10,7 +10,17 @@ As a developer, you are tasked with creating a treasure hunt game. The user will
 ### 📚 User Stories
 
 - As a user, I can see a page with a three by three grid board game with a question mark in each square.
+    -branch: board-game
+    -mapped voer array in state to dynamically render 9 squares
+    -used flexbox to position squares
+    passed values of array state to square
+    -styled the square
 - As a user, when I click on one of the question marks an alert appears with the index position of that question mark in the array.
+    - branch: index-position
+    - added an onCLick to the square div
+    - added a handleClick method to square
+    - passed index to square and to handleClick
+    - created handleGamePlay to square to index through functional props
 - As a user, when I click on one of the question marks instead of the alert the question mark turns into a tree emoji.
 - As a user, if I select the winning square the question mark will become a treasure emoji and if I select the losing square the question mark will become a bomb emoji.
 - As a user, I can click on a “Play Again” button that will restart the game.
