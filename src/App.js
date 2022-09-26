@@ -50,15 +50,24 @@ const App = () => {
     setTreasureLocation(Math.floor(Math.random()* board.length))
     setBombLocation(Math.random() * board.length)
   }
+
 console.log("treasure:" , treasureLocation)
 console.log("bomb:", bombLocation)
 
   return (
     <>
-      <h1>Treasure Hunt Game</h1> 
+      <h1>Treasure Hunt Game</h1>
+      <div className="headder">
+        <button onClick={handleReset}> Restart Game </button>
+      </div>
+     
       <div className="island">
-        <img src= {Island}  alt="deserted island" />
-        <div className="board-game">
+        <picture>
+          <source media='(min-width:0px' srcSet={Island} />
+          <img src= {Island} alt="island" />
+        </picture>
+       </div>
+      <div className="board-game">
           {board.map((square,index) => {
             return <Square 
                     square={square} 
@@ -67,10 +76,10 @@ console.log("bomb:", bombLocation)
                     handleGamePlay={handleGamePlay}
                     />
           })}
-        </div>
-        <button onClick={handleReset}> Restart Game </button>
       </div>
-    </>
+      
+      
+    </>  
   )
 }
 
