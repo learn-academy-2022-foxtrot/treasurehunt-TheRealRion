@@ -1,12 +1,18 @@
 h1 {
   text-align: center;
 }
+div {
+  background-color: #00C2CB 
+}
 
 .board-game {
   display: flex;
   flex-wrap: wrap;
   width: 610px;
-  margin:0 auto;  
+  margin:0 auto; 
+  position: relative;
+  z-index: 1
+  
 }
 
 .square {
@@ -17,3 +23,9 @@ h1 {
   text-align: center;
 }
 
+.island {
+  position: absolute; 
+  width: 910px;
+  margin: 0 auto;
+  z-index: 0
+}
