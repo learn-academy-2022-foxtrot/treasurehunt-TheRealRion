@@ -1,31 +1,43 @@
 h1 {
   text-align: center;
 }
+
 div {
-  background-color: #00C2CB 
+  background-color: none ;
 }
 
 .board-game {
   display: flex;
   flex-wrap: wrap;
-  width: 610px;
+  width: 310px;
   margin:0 auto; 
-  position: relative;
-  z-index: 1
-  
+  position: auto;
+  z-index: 1;
+  padding-top: 100px; 
+  max-width: 910px; 
 }
 
 .square {
-  height: 200px;
-  width: 200px;
+  height: 100px;
+  width: 100px;
   border: 1px solid black;
   font-size: 10rem;
   text-align: center;
+  opacity: 1.5;
 }
 
 .island {
-  position: absolute; 
-  width: 910px;
-  margin: 0 auto;
-  z-index: 0
+  display: flex;
+  position: fixed; 
+  justify-content: center;
+  margin: auto auto;
+  z-index: -1;
+  filter: contrast(1.5) brightness(.75);
+}
+
+.headder {
+  background-color: white ;
+  display: flex;
+  justify-content: center;
+  text-align: center; 
 }
